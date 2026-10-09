@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VIDEO TITLE — Concept Notes</title>
+<link rel="stylesheet" href="report.css">
+</head>
+<body>
+<main>
+
+<!-- ============ HEADER ============ -->
+<div class="kicker">Concept notes</div>
+<h1>VIDEO TITLE</h1>
+<p class="deck">One sentence on what the video teaches and why it matters to the reader.</p>
+
+<!-- Source card: the thumbnail goes here, wherever the source is referenced.
+     thumb.jpg comes from `get_visuals.py info`. The whole card links to the video. -->
+<a class="source-card" href="https://www.youtube.com/watch?v=VIDEO_ID">
+  <div class="thumb"><img src="thumb.jpg" alt="Thumbnail of the video: VIDEO TITLE"><span class="play" aria-hidden="true"></span></div>
+  <div class="meta">
+    <div class="label">Source video</div>
+    <div class="vtitle">VIDEO TITLE</div>
+    <div class="byline">CHANNEL NAME</div>
+    <div class="chips"><span class="chip">33:46</span><span class="chip">Oct 2026</span><span class="chip">Interview</span></div>
+    <div class="watch">Watch on YouTube →</div>
+  </div>
+</a>
+
+<!-- The whole idea in one sentence. -->
+<div class="takeaway">
+  <div class="label">The idea</div>
+  <p>The transferable mechanism in one or two sentences, in your own words.</p>
+</div>
+
+<!-- Two to four numbers or short facts that anchor the idea. Only include if real; skip the strip otherwise. -->
+<div class="stats">
+  <div class="stat"><div class="num">30,000</div><div class="what">historical edits distilled into one skill</div></div>
+  <div class="stat"><div class="num">3</div><div class="what">perspectives per candidate before it counts</div></div>
+  <div class="stat"><div class="num">~1 yr</div><div class="what">shelf life of a harness feature</div></div>
+</div>
+
+<!-- ============ CONCEPT ============ -->
+<h2>The concept</h2>
+<p class="section-note">What is being taught, for someone who has not watched.</p>
+
+<div class="prose">
+  <p>Two to four short paragraphs. Lead with the mechanism, then why it works, then what is genuinely new versus familiar.</p>
+  <p>Use <strong>bold</strong> sparingly for the term the reader should remember.</p>
+</div>
+
+<!-- A drawn diagram of the mechanism. Give every <marker> a unique id per SVG. Use the .svg classes so it themes in dark mode. -->
+<div class="diagram">
+  <div class="title">How it works</div>
+  <svg class="svg" viewBox="0 0 760 150" role="img" aria-labelledby="d1t">
+    <title id="d1t">Three steps: input, process, output, with a feedback arrow from output back to input.</title>
+    <defs><marker id="ah1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path class="arrowhead" d="M0 0L10 5L0 10z"/></marker>
+          <marker id="ah1a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path class="arrowhead accent" d="M0 0L10 5L0 10z"/></marker></defs>
+    <rect class="box" x="10" y="30" width="190" height="64" rx="12"/><text class="lbl" x="105" y="58" text-anchor="middle">Input</text><text class="sub" x="105" y="78" text-anchor="middle">what goes in</text>
+    <rect class="box accent" x="285" y="30" width="190" height="64" rx="12"/><text class="lbl" x="380" y="58" text-anchor="middle">Process</text><text class="sub" x="380" y="78" text-anchor="middle">the key step</text>
+    <rect class="box skill" x="560" y="30" width="190" height="64" rx="12"/><text class="lbl" x="655" y="58" text-anchor="middle">Output</text><text class="sub" x="655" y="78" text-anchor="middle">what comes out</text>
+    <path class="edge" d="M200 62H283" marker-end="url(#ah1)"/><path class="edge" d="M475 62H558" marker-end="url(#ah1)"/>
+    <path class="edge accent dashed" d="M655 96V128H105V98" marker-end="url(#ah1a)"/><text class="sub" x="380" y="122" text-anchor="middle">feedback compounds back</text>
+  </svg>
+</div>
+
+<!-- Frames pulled from the video. ONLY include a frame if it carries information (slide, diagram, UI, demo).
+     Skip talking heads. Caption says why the frame matters; the timestamp chip deep-links into the video. -->
+<figure class="frame">
+  <img src="frames/frame_0324.jpg" alt="Describe what the frame shows, not just that it is a frame">
+  <figcaption><a class="ts" href="https://youtu.be/VIDEO_ID?t=204">03:24</a><span>What this moment shows and why it is worth seeing.</span></figcaption>
+</figure>
+
+<!-- Several smaller frames side by side. -->
+<div class="frames">
+  <figure class="frame"><img src="frames/frame_0419.jpg" alt="..."><figcaption><a class="ts" href="https://youtu.be/VIDEO_ID?t=259">04:19</a><span>Caption.</span></figcaption></figure>
+  <figure class="frame"><img src="frames/frame_0514.jpg" alt="..."><figcaption><a class="ts" href="https://youtu.be/VIDEO_ID?t=314">05:14</a><span>Caption.</span></figcaption></figure>
+</div>
+
+<!-- Optional: a comparison table when the video contrasts options. -->
+<div class="table-wrap"><table>
+  <thead><tr><th></th><th>Option A</th><th>Option B</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Finish line</strong></td><td>…</td><td>…</td></tr>
+    <tr><td><strong>Workspace</strong></td><td>…</td><td>…</td></tr>
+  </tbody>
+</table></div>
+
+<!-- Optional: caveats, transcript quirks, time-sensitive claims. -->
+<div class="callout"><b>Note:</b> anything the reader should treat with care, such as claims that date quickly.</div>
+
+<!-- ============ APPLICATION OPTIONS ============ -->
+<h2>What you could do with it</h2>
+<p class="section-note">Only the lenses that genuinely fit. One to three cards.</p>
+<div class="cards">
+  <div class="card skill"><span class="badge skill">New skill</span><h3>Specific, concrete label</h3><p>Two to four sentences, specific to this video.</p></div>
+  <div class="card plan"><span class="badge plan">Implementation plan</span><h3>Specific, concrete label</h3><p>Two to four sentences, specific to this video.</p></div>
+  <div class="card rearch"><span class="badge rearch">Rearchitecture</span><h3>Specific, concrete label</h3><p>Two to four sentences, specific to this video.</p></div>
+</div>
+
+<!-- ============ PROMPT ============ -->
+<h2>Ready-to-use prompt</h2>
+<p class="section-note">Paste into a fresh Claude conversation or Claude Code. Self-contained: it does not assume you watched the video.</p>
+<div class="prompt">
+  <div class="bar"><span>Prompt</span><button type="button" data-copy="prompt-text">Copy</button></div>
+  <pre id="prompt-text">You are helping me ...</pre>
+</div>
+
+<footer>Generated with the learn-this skill from <a href="https://www.youtube.com/watch?v=VIDEO_ID">the source video</a>. Visuals are stills from the video, shown for commentary.</footer>
+
+</main>
+<script src="report.js"></script>
+</body>
+</html>
