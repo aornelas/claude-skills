@@ -34,13 +34,13 @@ Drop a YouTube URL into chat (or say "learn-this" with a link). The skill turns 
 
 Requirements: Python 3, `ffmpeg`, and `pip install youtube-transcript-api yt-dlp` (if your `yt-dlp` is stale, the scripts fall back to `uvx yt-dlp`).
 
-![A learn-this report](skills/learn-this/examples/preview.jpg)
+[![A learn-this report: Building secure agents for knowledge work](skills/learn-this/examples/preview.jpg)](https://aornelas.github.io/claude-skills/skills/learn-this/examples/building-secure-agents-for-knowledge-work-concept-notes.html)
 
-Example reports, each produced by running the skill on a real video. They are single self-contained files, so download one and open it in a browser:
+Example reports, each produced by running the skill on a real video (click the preview above, or any link below, to open the live report). Each one is a single self-contained file in [`examples/`](skills/learn-this/examples), so you can also download it and open it locally:
 
-- [Claude Chat vs Cowork vs Code](skills/learn-this/examples/claude-chat-vs-cowork-vs-code-concept-notes.html): a product explainer with slides, so it includes stills from the video.
-- [How the Claude Code team uses Claude Code](skills/learn-this/examples/how-the-claude-code-team-uses-claude-code-concept-notes.html): a roundtable, so it relies on drawn diagrams.
-- [Building secure agents for knowledge work](skills/learn-this/examples/building-secure-agents-for-knowledge-work-concept-notes.html): an interview, same approach.
+- [Claude Chat vs Cowork vs Code](https://aornelas.github.io/claude-skills/skills/learn-this/examples/claude-chat-vs-cowork-vs-code-concept-notes.html): a product explainer with slides, so it includes stills from the video.
+- [How the Claude Code team uses Claude Code](https://aornelas.github.io/claude-skills/skills/learn-this/examples/how-the-claude-code-team-uses-claude-code-concept-notes.html): a roundtable, so it relies on drawn diagrams.
+- [Building secure agents for knowledge work](https://aornelas.github.io/claude-skills/skills/learn-this/examples/building-secure-agents-for-knowledge-work-concept-notes.html): an interview, same approach.
 
 The thumbnails and stills belong to the videos' owners and are included only as commentary on those videos.
 
