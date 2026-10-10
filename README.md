@@ -1,27 +1,38 @@
 # claude-skills
 
-Skills I've built with [Claude](https://claude.com) for [Claude Code](https://claude.com/claude-code) and Claude.ai. Each skill is a self-contained folder under `skills/` with a `SKILL.md` and any scripts it needs.
+Skills I've built with [Claude](https://claude.com) for [Claude Code](https://claude.com/claude-code) and Claude.ai.
+
+## Setup
+
+Install `install-skill` once, then let it install everything else.
+
+**1. Clone and bootstrap.** A skill can only run from a session that already knows about it, so `install-skill` needs one manual step to install itself:
+
+```bash
+git clone https://github.com/aornelas/claude-skills.git
+python3 claude-skills/skills/install-skill/scripts/install_skill.py install-skill
+```
+
+That symlinks the skill into `~/.claude/skills`. (Prefer plain language? Open Claude Code in the clone and say "install the install-skill skill from this repo via a symlink.")
+
+**2. Install any other skill by asking.** In a new Claude Code session, just say:
+
+> install the learn-this skill
+
+or `install all the skills`. It symlinks the skill from your clone into `~/.claude/skills` and reports exactly what it did.
+
+**3. Update with `git pull`.** Installed skills are symlinks into your clone, so pulling is the only update step. New skills added to the repo need one "install the X skill" the first time.
+
+`install-skill` only ever creates symlinks or refuses. It never overwrites a real file or directory, and it won't relink an existing symlink without `--force`.
 
 ## Skills
 
 | Skill | What it does |
 |---|---|
+| [install-skill](skills/install-skill) | Symlinks a skill (or all of them) from this repo into `~/.claude/skills`, so installing is one sentence and updating is `git pull`. |
 | [learn-this](skills/learn-this) | Takes a YouTube link and turns what the video teaches into a visual HTML report: thumbnail, a diagram of the mechanism, stills from the video, and a ready-to-paste prompt for applying it. |
 
-## Install
-
-Copy a skill folder into your skills directory:
-
-```bash
-git clone https://github.com/aornelas/claude-skills.git
-cp -R claude-skills/skills/learn-this ~/.claude/skills/
-```
-
-Or symlink it, so `git pull` is the only update step:
-
-```bash
-ln -s "$PWD/claude-skills/skills/learn-this" ~/.claude/skills/learn-this
-```
+Each skill is a self-contained folder under `skills/` with a `SKILL.md` and any scripts it needs.
 
 ## learn-this
 
